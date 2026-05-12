@@ -1,15 +1,23 @@
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 import Skills from "@/components/Skills";
-import Highlight from "@/components/Highlight";
-import GridSection from "@/components/GridSection";
+import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
+import Services from "@/components/Services";
+import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-[#050505] selection:bg-purple-500/30 selection:text-white">
       <Hero />
+      <About />
       <Skills />
-      <Highlight />
-      <GridSection />
+      <Projects />
+      <Experience />
+      <Services />
+      <Testimonials />
+      <Contact />
     </main>
   );
 }
