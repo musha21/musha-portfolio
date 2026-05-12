@@ -1,20 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Musha | Full Stack Software Engineer",
-  description: "Portfolio of Musha, a Full Stack Software Engineer focused on SaaS, ERP systems, AI-powered applications, and modern UI/UX design.",
+  title: "Mohammad Musharraf | Full Stack Engineer & Designer",
+  description: "Portfolio of Mohammad Musharraf - Full Stack Software Engineer, AI Enthusiast, Graphic Designer, and Founder of Folo.grpx",
 };
 
 export default function RootLayout({
@@ -23,11 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-950 text-slate-50`}
-      >
+    <html lang="en" className="dark scroll-smooth">
+      <body className="antialiased bg-[#050505] text-white selection:bg-purple-500/30">
+        <div className="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-[#050505] to-[#050505]"></div>
+        <div className="fixed inset-0 z-[-1] bg-grid-pattern opacity-20"></div>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
